@@ -1,0 +1,1 @@
+export const IconStyles = {color:"white",fontSize:"28px",background:"#444444",padding:"5px",borderRadius:"50px",cursor:"pointer"}
