@@ -1,102 +1,127 @@
 import { Box, Grid, Link, Typography } from "@mui/material";
 import KeyboardArrowRightRoundedIcon from "@mui/icons-material/KeyboardArrowRightRounded";
+import category1 from "../../assets/CategoryImages/category-1.png";
+import category2 from "../../assets/CategoryImages/category-2.png";
+import category3 from "../../assets/CategoryImages/category-3.png";
+import category4 from "../../assets/CategoryImages/category-4.png";
+import category5 from "../../assets/CategoryImages/category-5.png";
+import category6 from "../../assets/CategoryImages/category-6.png";
+import category7 from "../../assets/CategoryImages/category-7.png";
+import category8 from "../../assets/CategoryImages/category-8.png";
+import category9 from "../../assets/CategoryImages/category-9.png";
+import category10 from "../../assets/CategoryImages/category-10.png";
+import category11 from "../../assets/CategoryImages/category-11.png";
+import category12 from "../../assets/CategoryImages/category-12.png";
+import category13 from "../../assets/CategoryImages/category-13.png";
+import category14 from "../../assets/CategoryImages/category-14.png";
+import category15 from "../../assets/CategoryImages/category-15.png";
+import category16 from "../../assets/CategoryImages/category-16.png";
+import category17 from "../../assets/CategoryImages/category-17.png";
+import category18 from "../../assets/CategoryImages/category-18.png";
+import category19 from "../../assets/CategoryImages/category-19.png";
+import category20 from "../../assets/CategoryImages/category-20.png";
+import category21 from "../../assets/CategoryImages/category-21.png";
+import category22 from "../../assets/CategoryImages/category-22.png";
+import category23 from "../../assets/CategoryImages/category-23.png";
+import category24 from "../../assets/CategoryImages/category-24.png";
+
 
 export function HomeCategory() {
   const ImageList = [
     {
-      image: "src/assets/CategoryImages/category-1.png",
+      image: category1,
       name: "Quicky hot deals",
     },
     {
-      image: "src/assets/CategoryImages/category-2.png",
+      image: category2,
       name: "friuts and vegetables",
     },
     {
-      image: "src/assets/CategoryImages/category-3.png",
+      image: category3,
       name: "atta rice and dhalls",
     },
     {
-      image: "src/assets/CategoryImages/category-4.png",
+      image: category4,
       name: "dry fruit & masala",
     },
     {
-      image: "src/assets/CategoryImages/category-5.png",
+      image: category5,
       name: "dairy bread & eggs",
     },
     {
-      image: "src/assets/CategoryImages/category-6.png",
+      image: category6,
       name: "quicky instant foods",
     },
     {
-      image: "src/assets/CategoryImages/category-7.png",
+      image: category7,
       name: "chocolates and deserts",
     },
     {
-      image: "src/assets/CategoryImages/category-8.png",
+      image: category8,
       name: "quicky munchies",
     },
     {
-      image: "src/assets/CategoryImages/category-9.png",
+      image: category9,
       name: "cold drinks and juices",
     },
     {
-      image: "src/assets/CategoryImages/category-10.png",
+      image: category10,
       name: "cereals and breakfast",
     },
     {
-      image: "src/assets/CategoryImages/category-11.png",
+      image: category11,
       name: "sauces and spreads",
     },
     {
-      image: "src/assets/CategoryImages/category-12.png",
+      image: category12,
       name: "tea , coffee & more",
     },
     {
-      image: "src/assets/CategoryImages/category-13.png",
+      image: category13,
       name: "quicly biscuits",
     },
     {
-      image: "src/assets/CategoryImages/category-14.png",
+      image: category14,
       name: "body, bath and shower",
     },
     {
-      image: "src/assets/CategoryImages/category-15.png",
+      image: category15,
       name: "cleaning essentials",
     },
     {
-      image: "src/assets/CategoryImages/category-16.png",
+      image: category16,
       name: "beauty and grooming",
     },
     {
-      image: "src/assets/CategoryImages/category-17.png",
+      image: category17,
       name: "homes and kitchens",
     },
     {
-      image: "src/assets/CategoryImages/category-18.png",
+      image: category18,
       name: "sanitary and electricals",
     },
     {
-      image: "src/assets/CategoryImages/category-19.png",
+      image: category19,
       name: "hygeine and wellness",
     },
     {
-      image: "src/assets/CategoryImages/category-20.png",
+      image: category20,
       name: "Quicky baby care",
     },
     {
-      image: "src/assets/CategoryImages/category-21.png",
+      image: category21,
       name: "new pet supplies",
     },
     {
-      image: "src/assets/CategoryImages/category-22.png",
+      image: category22,
       name: "paan corner items",
     },
     {
-      image: "src/assets/CategoryImages/category-23.png",
+      image: category23,
       name: "Quicky fresh meat",
     },
     {
-      image: "src/assets/CategoryImages/category-24.png",
+      image: category24,
       name: "Quicky bakery items",
     },
   ];
