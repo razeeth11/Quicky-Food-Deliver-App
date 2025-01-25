@@ -11,7 +11,7 @@ export function AppBar() {
       container
       sx={{
         background: "#ec6436",
-        padding: "20px",
+        padding: "10px",
       }}
     >
       <Grid
@@ -43,14 +43,14 @@ export function AppBar() {
             }}
           >
             <Typography
-              sx={{ fontSize: "26px", fontWeight: 700, color: "#ec6436" }}
+              sx={{ fontSize:"22px", fontWeight: 700, color: "#ec6436" }}
             >
               19
             </Typography>
             <Typography
               sx={{
-                fontSize: "18px",
-                fontWeight: 500,
+                fontSize: "14px",
+                fontWeight: 600,
                 color: "#ec6436",
                 mt: "-8px",
               }}
@@ -60,7 +60,7 @@ export function AppBar() {
           </Box>
           <Box>
             <Typography
-              sx={{ color: "white", fontWeight: 600, fontSize: "20px" }}
+              sx={{ color: "white", fontWeight: 600, fontSize: {xs:"16px",md:"20px"} }}
             >
               Delivery to
             </Typography>
@@ -107,8 +107,8 @@ export function AppBar() {
           placeholder='Search for "Biryani"'
           type="text"
           style={{
-            fontSize: "18px",
-            padding: "15px",
+            fontSize: "16px",
+            padding: "10px",
             outline: "none",
             border: "none",
             borderRadius: "10px",
