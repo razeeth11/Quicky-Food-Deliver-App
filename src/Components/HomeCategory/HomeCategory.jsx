@@ -138,7 +138,7 @@ export function HomeCategory() {
         <Typography
           sx={{ fontSize: { xs: "16px", md: "20px" }, fontWeight: 600 }}
         >
-          Great deals on top picks
+          Explore by Categories
         </Typography>
         <Link
           sx={{
@@ -155,17 +155,19 @@ export function HomeCategory() {
       <Grid
         sx={{
           display: "flex",
-          alignItems: "center",
-          gap: "20px",
+          alignItems: "start",
+          gap: "15px",
           overflow: "scroll",
         }}
       >
         {ImageList.map((item, index) => (
-          <Box key={index} sx={{ width: "85px", margin: "15px 0" }}>
+          <Box key={index} sx={{  margin: "15px 0" }}>
+            <Box sx={{width:"90px"}}>
             <img
               src={item.image}
-              style={{ width: "85px", borderRadius: "10px" }}
+              style={{ width: "80px", borderRadius: "10px" }}
             />
+            </Box>
             <Typography
               sx={{
                 fontSize: "12px",
