@@ -158,7 +158,7 @@ function Coupons() {
         Save more with coupons
       </Typography>
       <Grid sx={{display:"flex",alignItems:"center",gap:"15px",margin:"10px 0",overflow:"scroll"}}>
-        {[1, 2, 3, 4].map((item, index) => (
+        {[1, 2, 3, 4 ,5].map((item, index) => (
           <Box
           key={index}
             sx={{

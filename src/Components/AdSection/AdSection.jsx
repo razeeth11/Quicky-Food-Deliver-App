@@ -1,5 +1,4 @@
-import { Box, Grid } from "@mui/material";
-import { useEffect, useRef } from "react";
+import { Box, Grid, Typography } from "@mui/material";
 
 export function AdSection() {
   const imageArray = [
@@ -15,7 +14,17 @@ export function AdSection() {
     "https://instamart-media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,h_430,w_640/MERCHANDISING_BANNERS/IMAGES/MERCH/2025/1/25/4bbe7b6e-d1c7-416f-b26e-3b8ce53f55a2_11911.png",
   ];
 
+  const brandArray = [
+    "https://instamart-media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,h_170,w_180/MERCHANDISING_BANNERS/IMAGES/MERCH/2024/10/8/5a672feb-5b1d-4195-8e7a-6eba6fcf750c_8597.png",
+  "https://instamart-media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,h_170,w_180/MERCHANDISING_BANNERS/IMAGES/MERCH/2025/1/26/07148731-05c2-41f1-b0e4-59fa82d45fde_8987.png",
+  "https://instamart-media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,h_170,w_180/MERCHANDISING_BANNERS/IMAGES/MERCH/2025/1/21/55999056-693c-45f5-a8ab-717560a35626_10519.png",
+  "https://instamart-media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,h_170,w_180/MERCHANDISING_BANNERS/IMAGES/MERCH/2024/12/9/95d5791f-95f2-4934-b982-4ece23426cb2_8826.png",
+  "https://instamart-media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,h_170,w_180/MERCHANDISING_BANNERS/IMAGES/MERCH/2025/1/10/44ee59d9-7094-4897-8230-d76c600be01a_10397.png",
+  "https://instamart-media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,h_170,w_180/MERCHANDISING_BANNERS/IMAGES/MERCH/2025/1/26/3d6f718f-d59a-46d5-9ce4-da3bdf34998c_9398.png",
+  "https://instamart-media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,h_170,w_180/MERCHANDISING_BANNERS/IMAGES/MERCH/2025/1/24/2fc9e590-def3-4068-a698-352890a51e6d_8061.png",
+  ]
   return (
+    <>
     <Grid
       sx={{
         display: "flex",
@@ -32,5 +41,25 @@ export function AdSection() {
         </Box>
       ))}
     </Grid>
+    <Grid>
+      <ShopByBrand brandArray={brandArray}/>
+    </Grid>
+    </>
   );
+}
+
+
+function ShopByBrand({brandArray}){
+  return(
+    <Grid sx={{display:"flex",flexDirection:"column",gap:"20px",margin:"20px 0",padding:"0 10px"}}>
+      <Typography sx={{ fontSize: { xs: "16px", md: "20px" }, fontWeight: 600 }}>Shop by Brands</Typography>
+      <Grid sx={{display:"flex",alignItems:"center",gap:"20px",overflow:"scroll"}}>
+        {brandArray.map((item,index)=>
+        <Box key={index}>
+          <img src={item} style={{width:"100px"}}/>
+        </Box>
+        )}
+      </Grid>
+    </Grid>
+  )
 }
