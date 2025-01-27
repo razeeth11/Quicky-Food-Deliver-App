@@ -144,9 +144,10 @@ export function HomeCategory() {
           sx={{
             display: "flex",
             alignItems: "center",
-            fontSize: { xs: "14px", md: "18px" },
+            fontSize:"14px",
             color: "#ec6436",
             textDecoration: "none",
+            cursor:"pointer"
           }}
         >
           View all <KeyboardArrowRightRoundedIcon />{" "}

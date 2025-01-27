@@ -4,6 +4,7 @@ import Grid from '@mui/material/Grid'
 import { AppBar } from './Components/AppBar/AppBar'
 import { HomeCategory } from './Components/HomeCategory/HomeCategory'
 import { GreatDeals } from './Components/GreatDeals/GreatDeals'
+import { AdSection } from './Components/AdSection/AdSection'
 
 
 
@@ -23,6 +24,7 @@ export function Home(){
       <AppBar/> 
       <HomeCategory/> 
       <GreatDeals/> 
+      <AdSection/>
     </Grid>
   )
 }
