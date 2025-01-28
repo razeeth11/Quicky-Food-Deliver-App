@@ -80,7 +80,7 @@ function ImageListComponent({ImageList}){
             <Box sx={{padding:"10px 10px 0 10px"}}>
             <img
               src={item.image}
-              style={{ width: "100px", borderRadius: "10px" }}
+              style={{ width: "80px", borderRadius: "10px" }}
             />
             </Box>
             <Typography
@@ -89,6 +89,7 @@ function ImageListComponent({ImageList}){
                 textAlign: "center",
                 fontWeight: 400,
                 textTransform: "capitalize",
+                width:"100px"
               }}
             >
               {item.name}
