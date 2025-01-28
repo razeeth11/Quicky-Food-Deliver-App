@@ -1,6 +1,6 @@
 import { Box, Grid, Link, Typography } from "@mui/material";
-import { ImageListComponent } from "./ImageListComponent";
 import { beautyList, groceryList, houseList, snacksList } from "./ImageList";
+import { ImageListComponent } from "./ImageListComponent.jsx";
 
 //household
 
