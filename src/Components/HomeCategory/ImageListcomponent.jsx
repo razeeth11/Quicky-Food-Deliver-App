@@ -1,6 +1,6 @@
 import { Box, Grid, Typography } from "@mui/material";
 
-export function ImageListComponent({ImageList}){
+function ImageListComponent({ImageList}){
     return(
       <Grid
           sx={{
@@ -34,3 +34,5 @@ export function ImageListComponent({ImageList}){
         </Grid>
     )
   }
+
+  export default ImageListComponent;
