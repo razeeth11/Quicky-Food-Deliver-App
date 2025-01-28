@@ -17,13 +17,13 @@ body{
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-200vw);
+    transform: translateX(-100vw);
   }
 }
 
 .scroll{
   scroll-behavior: smooth;
-  animation: scroll-left 25s linear infinite;
+  animation: scroll-left 15s linear infinite;
 }
 
 /* .scroll-container img {

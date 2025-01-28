@@ -1,187 +1,69 @@
 import { Box, Grid, Link, Typography } from "@mui/material";
-import KeyboardArrowRightRoundedIcon from "@mui/icons-material/KeyboardArrowRightRounded";
-import category1 from "../../assets/CategoryImages/category-1.png";
-import category2 from "../../assets/CategoryImages/category-2.png";
-import category3 from "../../assets/CategoryImages/category-3.png";
-import category4 from "../../assets/CategoryImages/category-4.png";
-import category5 from "../../assets/CategoryImages/category-5.png";
-import category6 from "../../assets/CategoryImages/category-6.png";
-import category7 from "../../assets/CategoryImages/category-7.png";
-import category8 from "../../assets/CategoryImages/category-8.png";
-import category9 from "../../assets/CategoryImages/category-9.png";
-import category10 from "../../assets/CategoryImages/category-10.png";
-import category11 from "../../assets/CategoryImages/category-11.png";
-import category12 from "../../assets/CategoryImages/category-12.png";
-import category13 from "../../assets/CategoryImages/category-13.png";
-import category14 from "../../assets/CategoryImages/category-14.png";
-import category15 from "../../assets/CategoryImages/category-15.png";
-import category16 from "../../assets/CategoryImages/category-16.png";
-import category17 from "../../assets/CategoryImages/category-17.png";
-import category18 from "../../assets/CategoryImages/category-18.png";
-import category19 from "../../assets/CategoryImages/category-19.png";
-import category20 from "../../assets/CategoryImages/category-20.png";
-import category21 from "../../assets/CategoryImages/category-21.png";
-import category22 from "../../assets/CategoryImages/category-22.png";
-import category23 from "../../assets/CategoryImages/category-23.png";
-import category24 from "../../assets/CategoryImages/category-24.png";
+import { ImageListComponent } from "./ImageListComponent";
+import { beautyList, groceryList, houseList, snacksList } from "./ImageList";
+
+//household
+
+// https://instamart-media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_294/NI_CATALOG/IMAGES/CIW/2024/7/3/8c9cb7ac-d548-4bf6-89e3-9118444cd1c4_16ee87fc-006c-42ad-8605-12ae8dfbce68
+// https://instamart-media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_294/NI_CATALOG/IMAGES/CIW/2024/10/28/51cb39de-0a69-4f14-b30c-c0ad539bd690_3db0dfdf-a32e-4820-88f1-6dbc9f670aa3
+// https://instamart-media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_294/NI_CATALOG/IMAGES/CIW/2024/7/3/89f5d94c-3e26-4c27-9722-7c987c44179a_24e91cd6-9f5c-4655-84e8-48c413f12838
+// https://instamart-media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_294/NI_CATALOG/IMAGES/CIW/2024/7/3/6599e8e8-6d26-4168-b95a-6b4ac0cd65be_c60957de-4097-4f1a-9a9e-09f9a6e4a704
+
+
+//explore by cate
+
+// https://cdn.zeptonow.com/production/tr:w-416,ar-416-464,pr-true,f-auto,q-80/inventory/banner/e611e8dd-ae10-49f9-bbcf-89391c5f557e.png
+// https://cdn.zeptonow.com/production/tr:w-416,ar-416-464,pr-true,f-auto,q-80/inventory/banner/93901c5c-672f-4869-b6f0-e93f21d0453a.png
+// https://cdn.zeptonow.com/production/tr:w-416,ar-416-464,pr-true,f-auto,q-80/inventory/banner/2ee60851-c4ba-464e-a965-f82fb607a940.png
+// https://cdn.zeptonow.com/production/tr:w-416,ar-416-464,pr-true,f-auto,q-80/inventory/banner/aa3ed677-6164-4c53-b660-f12bc13032eb.png
+// https://cdn.zeptonow.com/production/tr:w-416,ar-416-464,pr-true,f-auto,q-80/inventory/banner/0908a28b-713b-4d13-824b-0bbc5b2ebd1a.png
+// https://cdn.zeptonow.com/production/tr:w-416,ar-416-464,pr-true,f-auto,q-80/inventory/banner/5b95e7f0-8b1f-4f23-b911-357be07acfe5.png
 
 
 export function HomeCategory() {
-  const ImageList = [
-    {
-      image: category1,
-      name: "Quicky hot deals",
-    },
-    {
-      image: category2,
-      name: "friuts and vegetables",
-    },
-    {
-      image: category3,
-      name: "atta rice and dhalls",
-    },
-    {
-      image: category4,
-      name: "dry fruit & masala",
-    },
-    {
-      image: category5,
-      name: "dairy bread & eggs",
-    },
-    {
-      image: category6,
-      name: "quicky instant foods",
-    },
-    {
-      image: category7,
-      name: "chocolates and deserts",
-    },
-    {
-      image: category8,
-      name: "quicky munchies",
-    },
-    {
-      image: category9,
-      name: "cold drinks and juices",
-    },
-    {
-      image: category10,
-      name: "cereals and breakfast",
-    },
-    {
-      image: category11,
-      name: "sauces and spreads",
-    },
-    {
-      image: category12,
-      name: "tea , coffee & more",
-    },
-    {
-      image: category13,
-      name: "quicly biscuits",
-    },
-    {
-      image: category14,
-      name: "body, bath and shower",
-    },
-    {
-      image: category15,
-      name: "cleaning essentials",
-    },
-    {
-      image: category16,
-      name: "beauty and grooming",
-    },
-    {
-      image: category17,
-      name: "homes and kitchens",
-    },
-    {
-      image: category18,
-      name: "sanitary and electricals",
-    },
-    {
-      image: category19,
-      name: "hygeine and wellness",
-    },
-    {
-      image: category20,
-      name: "Quicky baby care",
-    },
-    {
-      image: category21,
-      name: "new pet supplies",
-    },
-    {
-      image: category22,
-      name: "paan corner items",
-    },
-    {
-      image: category23,
-      name: "Quicky fresh meat",
-    },
-    {
-      image: category24,
-      name: "Quicky bakery items",
-    },
-  ];
 
   return (
     <Grid sx={{ padding: "10px" }}>
       <Grid
-        sx={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-between",
-        }}
+      sx={{display:"flex",flexDirection:"column",overflowX:"scroll"}}
       >
         <Typography
-          sx={{ fontSize: { xs: "16px", md: "20px" }, fontWeight: 600 }}
+          sx={{ fontSize: "16px", fontWeight: 600 }}
         >
-          Explore by Categories
+          Grocery & Kitchen
         </Typography>
-        <Link
-          sx={{
-            display: "flex",
-            alignItems: "center",
-            fontSize:"14px",
-            color: "#ec6436",
-            textDecoration: "none",
-            cursor:"pointer"
-          }}
-        >
-          View all <KeyboardArrowRightRoundedIcon />{" "}
-        </Link>
+      <ImageListComponent ImageList={groceryList}/>
       </Grid>
       <Grid
-        sx={{
-          display: "flex",
-          alignItems: "start",
-          gap: "15px",
-          overflow: "scroll",
-        }}
       >
-        {ImageList.map((item, index) => (
-          <Box key={index} sx={{  margin: "15px 0" }}>
-            <Box sx={{width:"90px"}}>
-            <img
-              src={item.image}
-              style={{ width: "80px", borderRadius: "10px" }}
-            />
-            </Box>
-            <Typography
-              sx={{
-                fontSize: "12px",
-                textAlign: "center",
-                fontWeight: 400,
-                textTransform: "capitalize",
-              }}
-            >
-              {item.name}
-            </Typography>
-          </Box>
-        ))}
+        <Typography
+          sx={{ fontSize: "16px", fontWeight: 600 }}
+        >
+          Snacks & Munchies
+        </Typography>
+      <ImageListComponent ImageList={snacksList}/>
+      </Grid>
+      <Grid
+      >
+        <Typography
+          sx={{ fontSize: "16px", fontWeight: 600 }}
+        >
+          Beauty & Personal care
+        </Typography>
+      <ImageListComponent ImageList={beautyList}/>
+      </Grid>
+      <Grid
+      >
+        <Typography
+          sx={{ fontSize: "16px", fontWeight: 600 }}
+        >
+          Household & Essentials
+        </Typography>
+      <ImageListComponent ImageList={houseList}/>
       </Grid>
     </Grid>
   );
 }
+
+
+

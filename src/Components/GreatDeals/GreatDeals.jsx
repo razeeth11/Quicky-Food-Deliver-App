@@ -1,6 +1,6 @@
 import { Box, Button, Grid, Link, Typography } from "@mui/material";
 import KeyboardArrowRightRoundedIcon from "@mui/icons-material/KeyboardArrowRightRounded";
-import category1 from "../../assets/CategoryImages/category-1.png";
+import category1 from "../../assets/CategoryImages/grocery1.avif";
 import DiscountRoundedIcon from "@mui/icons-material/DiscountRounded";
 import {
   greatDealsBrand,
@@ -24,7 +24,7 @@ export function GreatDeals() {
           }}
         >
           <Typography
-            sx={{ fontSize: { xs: "16px", md: "20px" }, fontWeight: 600 }}
+            sx={{ fontSize: { xs: "16px", md: "18px" }, fontWeight: 600 }}
           >
             Great deals on top picks
           </Typography>
@@ -33,7 +33,7 @@ export function GreatDeals() {
               display: "flex",
               alignItems: "center",
               fontSize: "14px",
-              color: "#ec6436",
+              color: "#585858",
               textDecoration: "none",
               cursor: "pointer",
             }}
@@ -153,7 +153,7 @@ function Coupons() {
   return (
     <Grid sx={{ background: "rgb(255,193,7)", padding: "10px",mt:2 }}>
       <Typography
-        sx={{ fontSize: { xs: "16px", md: "20px" }, fontWeight: 600 }}
+        sx={{ fontSize: { xs: "16px", md: "18px" }, fontWeight: 600 }}
       >
         Save more with coupons
       </Typography>
@@ -164,7 +164,7 @@ function Coupons() {
             sx={{
                 display:"flex",
                 alignItems:"center",
-                gap:"20px",
+                gap:"10px",
               background: "white",
               padding: "15px",
               borderRadius: "10px",

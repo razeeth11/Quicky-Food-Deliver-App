@@ -12,7 +12,7 @@ import { AdSection } from './Components/AdSection/AdSection'
 function App() {
 
   return (
-    <Grid>
+    <Grid sx={{maxWidth:"1000px",margin:"0 auto"}}>
     <Home/>      
     </Grid>
   )

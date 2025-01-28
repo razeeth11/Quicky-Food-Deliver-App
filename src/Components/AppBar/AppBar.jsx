@@ -1,7 +1,7 @@
 import QueryBuilderRoundedIcon from "@mui/icons-material/QueryBuilderRounded";
 import PersonOutlineRoundedIcon from "@mui/icons-material/PersonOutlineRounded";
 import SearchRoundedIcon from "@mui/icons-material/SearchRounded";
-import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
+import LocalMallOutlinedIcon from '@mui/icons-material/LocalMallOutlined';
 import { Box, Grid, Stack, TextField, Typography } from "@mui/material";
 import { IconStyles } from "./AppBarStyles";
 
@@ -10,7 +10,7 @@ export function AppBar() {
     <Grid
       container
       sx={{
-        background: "#ec6436",
+        background: "#ADD8E6",
         padding: "10px",
       }}
     >
@@ -43,7 +43,7 @@ export function AppBar() {
             }}
           >
             <Typography
-              sx={{ fontSize:"22px", fontWeight: 700, color: "#ec6436" }}
+              sx={{ fontSize:"22px", fontWeight: 700, color: "#303030" }}
             >
               19
             </Typography>
@@ -51,7 +51,7 @@ export function AppBar() {
               sx={{
                 fontSize: "14px",
                 fontWeight: 600,
-                color: "#ec6436",
+                color: "#303030",
                 mt: "-8px",
               }}
             >
@@ -60,15 +60,15 @@ export function AppBar() {
           </Box>
           <Box>
             <Typography
-              sx={{ color: "white", fontWeight: 600, fontSize: {xs:"16px",md:"20px"} }}
+              sx={{ color: "#303030", fontWeight: 600, fontSize: {xs:"16px",md:"18px"} }}
             >
               Delivery to
             </Typography>
             <Typography
               sx={{
-                color: "rgba(255,255,255,.7)",
+                color: "#585858",
                 fontWeight: 400,
-                fontSize: "16px",
+                fontSize: "14px",
                 maxWidth: { xs: "150px", sm: "400px" },
                 whiteSpace: "nowrap",
                 textOverflow: "ellipsis",
@@ -89,7 +89,7 @@ export function AppBar() {
           }}
         >
           <PersonOutlineRoundedIcon sx={IconStyles} />
-          <MenuRoundedIcon sx={IconStyles} />
+          <LocalMallOutlinedIcon sx={IconStyles} />
         </Stack>
       </Grid>
       <Grid
