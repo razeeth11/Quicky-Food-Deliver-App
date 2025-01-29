@@ -1,5 +1,6 @@
 body{
-  margin: 0;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 *{
@@ -25,7 +26,3 @@ body{
   scroll-behavior: smooth;
   animation: scroll-left 15s linear infinite;
 }
-
-/* .scroll-container img {
-  width: 300px;
-} */

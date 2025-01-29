@@ -1,38 +1,46 @@
-
-import './App.css'
-import Grid from '@mui/material/Grid'
-import { AppBar } from './Components/AppBar/AppBar'
-import { HomeCategory } from './Components/HomeCategory/HomeCategory'
-import { GreatDeals } from './Components/GreatDeals/GreatDeals'
-import { AdSection } from './Components/AdSection/AdSection'
-
-
-
+import "./App.css";
+import Grid from "@mui/material/Grid";
+import { AppBar } from "./Components/AppBar/AppBar";
+import { HomeCategory } from "./Components/HomeCategory/HomeCategory";
+import { GreatDeals } from "./Components/GreatDeals/GreatDeals";
+import { AdSection } from "./Components/AdSection/AdSection";
+import { BrowserRouter, Routes, Route, useNavigate } from "react-router-dom";
+import { ProductListingPage } from "./Components/ProductListingPage/ProductListingPage";
+import { Button } from "@mui/material";
 
 function App() {
-
   return (
-    <Grid sx={{maxWidth:"1000px",margin:"0 auto"}}>
-    <Home/>      
-    </Grid>
-  )
+    <>
+      <AppBar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route
+          path="/listings/:productCategoryType"
+          element={<ProductListingPage />}
+        />
+        <Route path="*" element={<NotFoundPage />} />
+      </Routes>
+    </>
+  );
 }
 
-export function Home(){
-  return(
+export function Home() {
+  return (
     <Grid>
-      <AppBar/> 
-      <HomeCategory/> 
-      <GreatDeals/> 
-      <AdSection/>
+      <HomeCategory />
+      <GreatDeals />
+      <AdSection />
     </Grid>
-  )
+  );
 }
 
+const NotFoundPage = () => {
+  const navigate = useNavigate();
+  return (
+    <Grid>
+      <Button onClick={() => navigate("/")}>Back to home</Button>
+    </Grid>
+  );
+};
 
-
-
-
-
-
-export default App
+export default App;

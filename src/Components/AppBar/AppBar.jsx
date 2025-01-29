@@ -1,7 +1,7 @@
 import QueryBuilderRoundedIcon from "@mui/icons-material/QueryBuilderRounded";
 import PersonOutlineRoundedIcon from "@mui/icons-material/PersonOutlineRounded";
 import SearchRoundedIcon from "@mui/icons-material/SearchRounded";
-import LocalMallOutlinedIcon from '@mui/icons-material/LocalMallOutlined';
+import LocalMallOutlinedIcon from "@mui/icons-material/LocalMallOutlined";
 import { Box, Grid, Stack, TextField, Typography } from "@mui/material";
 import { IconStyles } from "./AppBarStyles";
 
@@ -10,8 +10,11 @@ export function AppBar() {
     <Grid
       container
       sx={{
-        background: "#ADD8E6",
+        background: "#efd7f7",
         padding: "10px",
+        position: "sticky",
+        top: 0,
+        zIndex: 999,
       }}
     >
       <Grid
@@ -43,7 +46,7 @@ export function AppBar() {
             }}
           >
             <Typography
-              sx={{ fontSize:"22px", fontWeight: 700, color: "#303030" }}
+              sx={{ fontSize: "22px", fontWeight: 700, color: "#303030" }}
             >
               19
             </Typography>
@@ -60,7 +63,11 @@ export function AppBar() {
           </Box>
           <Box>
             <Typography
-              sx={{ color: "#303030", fontWeight: 600, fontSize: {xs:"16px",md:"18px"} }}
+              sx={{
+                color: "#303030",
+                fontWeight: 600,
+                fontSize: { xs: "16px", md: "18px" },
+              }}
             >
               Delivery to
             </Typography>

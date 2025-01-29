@@ -1,5 +1,6 @@
 import { Box, Grid, Link, Typography } from "@mui/material";
 import { beautyList, groceryList, houseList, snacksList } from "./ImageList";
+import { useNavigate } from "react-router-dom";
 
 //household
 
@@ -7,7 +8,6 @@ import { beautyList, groceryList, houseList, snacksList } from "./ImageList";
 // https://instamart-media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_294/NI_CATALOG/IMAGES/CIW/2024/10/28/51cb39de-0a69-4f14-b30c-c0ad539bd690_3db0dfdf-a32e-4820-88f1-6dbc9f670aa3
 // https://instamart-media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_294/NI_CATALOG/IMAGES/CIW/2024/7/3/89f5d94c-3e26-4c27-9722-7c987c44179a_24e91cd6-9f5c-4655-84e8-48c413f12838
 // https://instamart-media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_294/NI_CATALOG/IMAGES/CIW/2024/7/3/6599e8e8-6d26-4168-b95a-6b4ac0cd65be_c60957de-4097-4f1a-9a9e-09f9a6e4a704
-
 
 //explore by cate
 
@@ -18,87 +18,81 @@ import { beautyList, groceryList, houseList, snacksList } from "./ImageList";
 // https://cdn.zeptonow.com/production/tr:w-416,ar-416-464,pr-true,f-auto,q-80/inventory/banner/0908a28b-713b-4d13-824b-0bbc5b2ebd1a.png
 // https://cdn.zeptonow.com/production/tr:w-416,ar-416-464,pr-true,f-auto,q-80/inventory/banner/5b95e7f0-8b1f-4f23-b911-357be07acfe5.png
 
-
 export function HomeCategory() {
-
   return (
     <Grid sx={{ padding: "10px" }}>
       <Grid
-      sx={{display:"flex",flexDirection:"column",overflowX:"scroll"}}
+        sx={{ display: "flex", flexDirection: "column", overflowX: "scroll" }}
       >
-        <Typography
-          sx={{ fontSize: "16px", fontWeight: 600 }}
-        >
+        <Typography sx={{ fontSize: "16px", fontWeight: 600 }}>
           Grocery & Kitchen
         </Typography>
-      <ImageListComponent ImageList={groceryList}/>
+        <ImageListComponent ImageList={groceryList} />
       </Grid>
-      <Grid
-      >
-        <Typography
-          sx={{ fontSize: "16px", fontWeight: 600 }}
-        >
+      <Grid>
+        <Typography sx={{ fontSize: "16px", fontWeight: 600 }}>
           Snacks & Munchies
         </Typography>
-      <ImageListComponent ImageList={snacksList}/>
+        <ImageListComponent ImageList={snacksList} />
       </Grid>
-      <Grid
-      >
-        <Typography
-          sx={{ fontSize: "16px", fontWeight: 600 }}
-        >
+      <Grid>
+        <Typography sx={{ fontSize: "16px", fontWeight: 600 }}>
           Beauty & Personal care
         </Typography>
-      <ImageListComponent ImageList={beautyList}/>
+        <ImageListComponent ImageList={beautyList} />
       </Grid>
-      <Grid
-      >
-        <Typography
-          sx={{ fontSize: "16px", fontWeight: 600 }}
-        >
+      <Grid>
+        <Typography sx={{ fontSize: "16px", fontWeight: 600 }}>
           Household & Essentials
         </Typography>
-      <ImageListComponent ImageList={houseList}/>
+        <ImageListComponent ImageList={houseList} />
       </Grid>
     </Grid>
   );
 }
 
-function ImageListComponent({ImageList}){
-  return(
+function ImageListComponent({ ImageList }) {
+  const navigate = useNavigate();
+  return (
     <Grid
-        sx={{
-          display: "flex",
-          alignItems: "start",
-          gap: "5px",
-          overflowX: "scroll",
-          
-        }}
-      >
-        {ImageList.map((item, index) => (
-          <Box key={index} sx={{  margin: "10px 0 25px 0" ,width:"120px",display:"flex",flexDirection:"column",alignItems:"center"}}>
-            <Box sx={{padding:"10px 10px 0 10px"}}>
+      sx={{
+        display: "flex",
+        alignItems: "start",
+        gap: "5px",
+        overflowX: "scroll",
+      }}
+    >
+      {ImageList.map((item, index) => (
+        <Box
+          onClick={() => navigate(`/listings/${item.name}`)}
+          key={index}
+          sx={{
+            margin: "10px 0 25px 0",
+            width: "120px",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+          }}
+        >
+          <Box sx={{ padding: "10px 10px 0 10px" }}>
             <img
               src={item.image}
               style={{ width: "80px", borderRadius: "10px" }}
             />
-            </Box>
-            <Typography
-              sx={{
-                fontSize: "12px",
-                textAlign: "center",
-                fontWeight: 400,
-                textTransform: "capitalize",
-                width:"100px"
-              }}
-            >
-              {item.name}
-            </Typography>
           </Box>
-        ))}
-      </Grid>
-  )
+          <Typography
+            sx={{
+              fontSize: "12px",
+              textAlign: "center",
+              fontWeight: 500,
+              textTransform: "capitalize",
+              width: "100px",
+            }}
+          >
+            {item.name}
+          </Typography>
+        </Box>
+      ))}
+    </Grid>
+  );
 }
-
-
-
